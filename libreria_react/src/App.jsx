@@ -3,15 +3,25 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import Producto from './components/Producto'
 
-{/*Este es un comentario para html desde JSX*/}
-
+{/*Este es un comentario para html desde JSX*/ }
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <Producto nombre="Labial Mate" precio={18000} />;
+      <main className="app">
+        <h1>Wonder Beauty Shop</h1>
+        <section className="catalogo">
+          <Producto />
+          <Producto />
+          <Producto />
+        </section>
+      </main>
+
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
