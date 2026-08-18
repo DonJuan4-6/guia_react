@@ -1,12 +1,13 @@
 import labial from "../assets/labial.png";
 
-export default function Producto(props) {
+export default function Producto({ nombre, descripcion, precio, categoria, imagen }) {
   return (
     <article className="producto">
-      <h2>{props.nombre}</h2>
-      <p>{props.descripcion}</p>
-      <strong>${props.precio}</strong>
-      <img src={labial} alt={nombre} />;
+      <img src={imagen} alt={nombre} />
+      <span className="categoria">{categoria}</span>
+      <h2>{nombre}</h2>
+      <p>{descripcion}</p>
+      <strong>${precio}</strong>
     </article>
   );
 }
